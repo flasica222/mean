@@ -1,22 +1,45 @@
-<section data-ng-controller="ArticlesController">
+<section data-ng-controller="AbonatiController">
 	<div class="page-header">
-		<h1>New Article</h1>
+		<h1>Abonat Nou</h1>
 	</div>
 	<div class="col-md-12">
-		<form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+		<form name="abonatForm" class="form-horizontal" data-ng-submit="create()" novalidate>
 			<fieldset>
-				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-					<label class="control-label" for="title">Title</label>
+
+                <div class="form-group" ng-class="{ 'has-error': abonatForm.title.$dirty && abonatForm.title.$invalid }">
+                    <label class="control-label" for="numeMare">Nume:</label>
+                    <div class="controls">
+                        <input name="numeMare" type="text" data-ng-model="numeMare" id="numeMare" class="form-control" placeholder="Introdu numele" required>
+                    </div>
+                </div>
+
+				<div class="form-group" ng-class="{ 'has-error': abonatForm.title.$dirty && abonatForm.title.$invalid }">
+					<label class="control-label" for="numeMic">Prenume:</label>
 					<div class="controls">
-						<input name="title" type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+						<input name="numeMic" type="text" data-ng-model="numeMic" id="numeMic" class="form-control" placeholder="Introdu prenumele" required>
 					</div>
 				</div>
-				<div class="form-group">
-					<label class="control-label" for="content">Content</label>
-					<div class="controls">
-						<textarea name="content" data-ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
-					</div>
-				</div>
+
+                <div class="form-group" ng-class="{ 'has-error': abonatForm.title.$dirty && abonatForm.title.$invalid }">
+                    <label class="control-label" for="numeMic">Email:</label>
+                    <div class="controls">
+                        <input name="email" type="text" data-ng-model="email" id="email" class="form-control" placeholder="Introdu email-ul" required>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error': abonatForm.title.$dirty && abonatForm.title.$invalid }">
+                    <label class="control-label" for="numeMic">Adresa</label>
+                    <div class="controls">
+                        <input name="adresa" type="text" data-ng-model="adresa" id="adresa" class="form-control" placeholder="Introdu adresa" required>
+                    </div>
+                </div>
+
+				<!--<div class="form-group">-->
+					<!--<label class="control-label" for="content">Content</label>-->
+					<!--<div class="controls">-->
+						<!--<textarea name="content" data-ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>-->
+					<!--</div>-->
+				<!--</div>-->
 				<div class="form-group">
 					<input type="submit" class="btn btn-default">
 				</div>
